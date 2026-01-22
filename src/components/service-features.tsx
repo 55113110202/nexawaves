@@ -88,7 +88,7 @@ export const ServiceFeatures = () => {
                                     ))}
                                 </ul>
 
-                                <Button variant="outline" className="group rounded-none border-primary text-primary hover:bg-primary hover:text-primary-foreground uppercase text-xs font-bold tracking-widest px-8">
+                                <Button variant="outline" className="group rounded-none border-primary text-primary hover:bg-primary hover:text-primary-foreground uppercase text-xs font-bold tracking-widest h-12 px-6 md:h-14 md:px-8">
                                     View Case Studies <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                 </Button>
                             </div>

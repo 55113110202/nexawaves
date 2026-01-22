@@ -9,6 +9,7 @@ export default defineType({
             name: 'name',
             title: 'Name',
             type: 'string',
+            validation: (Rule) => Rule.required(),
         }),
         defineField({
             name: 'slug',
@@ -18,6 +19,13 @@ export default defineType({
                 source: 'name',
                 maxLength: 96,
             },
+            validation: (Rule) => Rule.required(),
+        }),
+        defineField({
+            name: 'role',
+            title: 'Role / Title',
+            type: 'string',
+            description: 'Professional title (e.g., "Senior Developer", "Design Lead").',
         }),
         defineField({
             name: 'image',
@@ -26,6 +34,13 @@ export default defineType({
             options: {
                 hotspot: true,
             },
+            fields: [
+                {
+                    name: 'alt',
+                    type: 'string',
+                    title: 'Alternative Text',
+                },
+            ],
         }),
         defineField({
             name: 'bio',
@@ -40,10 +55,55 @@ export default defineType({
                 },
             ],
         }),
+        defineField({
+            name: 'socialProfiles',
+            title: 'Social Profiles',
+            type: 'array',
+            of: [
+                {
+                    type: 'object',
+                    fields: [
+                        {
+                            name: 'platform',
+                            title: 'Platform',
+                            type: 'string',
+                            options: {
+                                list: [
+                                    { title: 'Twitter/X', value: 'twitter' },
+                                    { title: 'LinkedIn', value: 'linkedin' },
+                                    { title: 'GitHub', value: 'github' },
+                                    { title: 'Website', value: 'website' },
+                                    { title: 'Other', value: 'other' },
+                                ],
+                            },
+                        },
+                        {
+                            name: 'url',
+                            title: 'URL',
+                            type: 'url',
+                        },
+                    ],
+                    preview: {
+                        select: {
+                            platform: 'platform',
+                            url: 'url',
+                        },
+                        prepare({ platform, url }) {
+                            return {
+                                title: platform,
+                                subtitle: url,
+                            }
+                        },
+                    },
+                },
+            ],
+            description: 'Social links for E-E-A-T and schema.org sameAs property.',
+        }),
     ],
     preview: {
         select: {
             title: 'name',
+            subtitle: 'role',
             media: 'image',
         },
     },

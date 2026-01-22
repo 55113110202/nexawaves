@@ -15,7 +15,7 @@ export const Footer = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Ready to upgrade your<br />digital presence?
             </h2>
-            <Button className="bg-white text-foreground hover:bg-white/90 rounded-none text-sm font-bold uppercase tracking-widest px-8 py-6">
+            <Button className="bg-white text-foreground hover:bg-white/90 rounded-none text-xs font-bold uppercase tracking-widest h-12 px-6 md:h-14 md:px-8">
               Start a Project <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
@@ -30,7 +30,7 @@ export const Footer = () => {
                 placeholder="Your email address"
                 className="bg-white/10 border border-white/20 px-4 py-3 w-full text-white focus:outline-none focus:border-white transition-colors placeholder:text-white/40"
               />
-              <Button className="rounded-none font-bold uppercase tracking-wider px-6">
+              <Button className="rounded-none font-bold uppercase tracking-wider h-12 px-6">
                 Join
               </Button>
             </div>

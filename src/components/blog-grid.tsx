@@ -79,7 +79,7 @@ export const BlogGrid = () => {
                 </div>
 
                 <div className="mt-8 text-center md:hidden">
-                    <Button variant="outline" className="w-full">Read All Articles</Button>
+                    <Button variant="outline" className="w-full h-12 uppercase text-xs font-bold tracking-widest">Read All Articles</Button>
                 </div>
             </div>
         </section>

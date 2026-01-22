@@ -19,14 +19,20 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+        // Custom variant for CTA buttons
+        cta: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-none font-bold uppercase tracking-widest",
+        "cta-outline": "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-none font-bold uppercase tracking-widest",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        default: "h-10 px-4 py-2 has-[>svg]:px-3",
+        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 text-xs",
+        lg: "h-12 rounded-md px-6 has-[>svg]:px-4",
+        xl: "h-14 px-8 text-sm",
         icon: "size-9",
         "icon-sm": "size-8",
         "icon-lg": "size-10",
+        // Uniform mobile-friendly CTA size
+        cta: "h-12 px-6 py-3 text-xs md:h-14 md:px-8 md:py-4",
       },
     },
     defaultVariants: {

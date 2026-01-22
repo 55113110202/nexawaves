@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-    name: 'category',
-    title: 'Category',
+    name: 'tag',
+    title: 'Tag',
     type: 'document',
     fields: [
         defineField({
@@ -25,31 +25,13 @@ export default defineType({
             name: 'description',
             title: 'Description',
             type: 'text',
-            description: 'Description for category archive pages to prevent duplicate content.',
-        }),
-        defineField({
-            name: 'parent',
-            title: 'Parent Category',
-            type: 'reference',
-            to: [{ type: 'category' }],
-            description: 'For hierarchical category structure (e.g., /blog/development/react).',
-        }),
-        defineField({
-            name: 'seo',
-            title: 'SEO Settings',
-            type: 'seo',
+            rows: 2,
+            description: 'Brief description for tag archive pages.',
         }),
     ],
     preview: {
         select: {
             title: 'title',
-            parent: 'parent.title',
-        },
-        prepare({ title, parent }) {
-            return {
-                title,
-                subtitle: parent ? `Parent: ${parent}` : undefined,
-            }
         },
     },
 })

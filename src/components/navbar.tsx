@@ -61,7 +61,7 @@ export const Navbar = () => {
                         <Search className="w-4 h-4" />
                     </Button>
                     <ThemeToggle />
-                    <Button className="rounded-full text-xs font-bold uppercase tracking-wider px-6 hidden md:flex">
+                    <Button className="rounded-full text-xs font-bold uppercase tracking-wider h-10 px-6 hidden md:flex">
                         Get in Touch
                     </Button>
                 </div>
