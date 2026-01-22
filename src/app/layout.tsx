@@ -25,8 +25,28 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "NEXAWAVES | Digital Magazine",
-  description: "Discoverable, Secure, Beautiful, Scalable.",
+  title: "Nexawaves | Technology That Brings Customers",
+  description: "We build discoverable, secure, beautiful, and scalable digital experiences for real estate, automotive, and e-commerce businesses.",
+  keywords: ["web development", "digital agency", "Next.js", "real estate websites", "automotive websites", "e-commerce", "Shopify"],
+  authors: [{ name: "Nexawaves" }],
+  creator: "Nexawaves",
+  openGraph: {
+    title: "Nexawaves | Technology That Brings Customers",
+    description: "We build discoverable, secure, beautiful, and scalable digital experiences.",
+    url: "https://nexawaves.com",
+    siteName: "Nexawaves",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nexawaves | Technology That Brings Customers",
+    description: "We build discoverable, secure, beautiful, and scalable digital experiences.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
