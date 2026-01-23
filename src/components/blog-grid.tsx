@@ -37,7 +37,7 @@ const articles = [
 
 export const BlogGrid = () => {
     return (
-        <section id="journal" className="py-24 border-t border-border bg-muted/30">
+        <section id="journal" className="py-16 md:py-20 border-t border-border bg-muted/30">
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-end mb-12">
                     <div>

@@ -6,11 +6,11 @@ import { Button } from "./ui/button";
 
 export const Footer = () => {
   return (
-    <footer className="bg-primary text-white pt-24 pb-12">
+    <footer className="bg-primary text-white pt-16 md:pt-20 pb-10">
       <div className="container mx-auto px-4">
 
         {/* Top Section: CTA and Newsletter */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 border-b border-white/20 pb-20 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 border-b border-white/20 pb-12 mb-12">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Ready to upgrade your<br />digital presence?
@@ -38,7 +38,7 @@ export const Footer = () => {
         </div>
 
         {/* Middle Section: Links */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-12 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-8 md:gap-12 mb-12">
           <div className="col-span-2 md:col-span-4 lg:col-span-4">
             <Link href="/" className="inline-block mb-6 group">
               <h2 className="text-3xl font-normal font-[family-name:var(--font-outfit)] tracking-tight group-hover:opacity-80 transition-opacity">nexawaves</h2>

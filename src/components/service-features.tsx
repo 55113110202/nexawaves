@@ -34,16 +34,16 @@ const features = [
 
 export const ServiceFeatures = () => {
     return (
-        <section id="services" className="py-24 bg-background">
+        <section id="services" className="py-16 md:py-20 bg-background">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
-                <div className="mb-20 text-center max-w-3xl mx-auto">
+                <div className="mb-12 md:mb-16 text-center max-w-3xl mx-auto">
                     <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Our Expertise</span>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">Tailored Solutions for<br />Industry Leaders</h2>
                     <div className="w-24 h-1 bg-primary mx-auto"></div>
                 </div>
 
-                <div className="flex flex-col gap-32">
+                <div className="flex flex-col gap-16 md:gap-24">
                     {features.map((feature, index) => (
                         <div key={index} className={cn(
                             "flex flex-col lg:flex-row gap-12 lg:gap-24 items-center",

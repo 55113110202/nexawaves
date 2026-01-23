@@ -19,46 +19,46 @@ interface WhyChooseUsProps {
 }
 
 export const WhyChooseUs = ({
-  heading = "Powerful Features",
-  description = "Discover the powerful features that make our platform stand out from the rest. Built with the latest technology and designed for maximum productivity.",
+  heading = "Why Partner With Us",
+  description = "We don't just build websites — we build customer acquisition systems that combine beautiful design, smart technology, and proven growth strategies.",
   linkUrl = "#contact",
-  linkText = "Book a demo",
+  linkText = "Start Your Project",
   features = [
     {
       id: "feature-1",
-      title: "Modern Design",
+      title: "Design That Builds Brand Value",
       description:
-        "Clean and intuitive interface built with the latest design principles. Optimized for the best user experience.",
-      image: "https://www.shadcnblocks.com/images/block/placeholder-1.svg",
+        "We create visually refined, user-focused websites that elevate your brand perception and build trust with customers from the first interaction.",
+      image: "/beauty.webp",
     },
     {
       id: "feature-2",
-      title: "Responsive Layout",
+      title: "Science-Driven Growth & Visibility",
       description:
-        "Fully responsive design that works seamlessly across all devices and screen sizes. Perfect for any platform.",
-      image: "https://www.shadcnblocks.com/images/block/placeholder-2.svg",
+        "We combine SEO, Google My Business optimization, Generative Engine Optimization (GEO), and automated content systems to consistently amplify customer discovery and growth.",
+      image: "/growth-visibility.png",
     },
     {
       id: "feature-3",
-      title: "Easy Integration",
+      title: "Modern, Scalable & Secure Technology",
       description:
-        "Simple integration process with comprehensive documentation and dedicated support team.",
-      image: "https://www.shadcnblocks.com/images/block/placeholder-3.svg",
+        "We build with the latest proven technologies to ensure your platform is fast, secure, and scalable — ready to grow with your business without performance bottlenecks.",
+      image: "/tech-security.png",
     },
     {
       id: "feature-4",
-      title: "Advanced Analytics",
+      title: "Conversion-Focused Systems",
       description:
-        "Powerful analytics tools to help you understand your users and make data-driven decisions.",
-      image: "https://www.shadcnblocks.com/images/block/placeholder-4.svg",
+        "We design every experience to guide visitors into action — turning traffic into leads, inquiries, and real customers through thoughtful UX, clear flows, and measurable outcomes.",
+      image: "/conversion-focus.png",
     },
   ],
 }: WhyChooseUsProps) => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="mb-20 text-center max-w-3xl mx-auto">
+        <div className="mb-12 md:mb-16 text-center max-w-3xl mx-auto">
           <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
             Why Choose Us
           </span>
@@ -72,18 +72,17 @@ export const WhyChooseUs = ({
         </div>
 
         {/* Features Grid */}
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <div
               key={feature.id}
               className="flex flex-col overflow-hidden rounded-sm border border-border bg-card group"
             >
-              <div className="relative aspect-[16/9] overflow-hidden bg-muted">
-                <div className="absolute inset-0 bg-gradient-to-tr from-neutral-200 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800" />
+              <div className="relative aspect-square overflow-hidden bg-muted">
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105 opacity-50 mix-blend-overlay"
+                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
               <div className="px-6 py-8 md:px-8 md:py-10">

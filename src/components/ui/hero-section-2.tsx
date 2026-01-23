@@ -121,7 +121,12 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                                     <motion.h1 className="text-4xl font-bold leading-tight text-foreground md:text-5xl" variants={itemVariants}>
                                         {title}
                                     </motion.h1>
-                                    <motion.div className="my-6 h-1 w-20 bg-primary" variants={itemVariants}></motion.div>
+                                    <motion.div
+                                        className="my-6 h-1 bg-primary origin-left"
+                                        initial={{ scaleX: 0, width: "50%" }}
+                                        animate={{ scaleX: 1 }}
+                                        transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                                    />
                                     <motion.p className="mb-8 max-w-md text-base text-muted-foreground" variants={itemVariants}>
                                         {subtitle}
                                     </motion.p>
@@ -167,7 +172,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
 
                         {/* Right Side: Hero Image */}
                         <motion.div
-                            className="w-full min-h-[300px] md:w-1/2 md:min-h-full lg:w-2/5 overflow-hidden relative bg-background"
+                            className="w-full min-h-[300px] md:w-1/2 md:min-h-full lg:w-2/5 overflow-hidden relative bg-background flex items-center justify-center"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1.2 }}
@@ -175,7 +180,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                             <img
                                 src={backgroundImage}
                                 alt="Hero"
-                                className="absolute inset-0 w-full h-full object-contain"
+                                className="w-full h-auto max-h-full object-contain"
                             />
                         </motion.div>
                     </motion.div>

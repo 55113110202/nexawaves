@@ -13,12 +13,6 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground font-sans selection:bg-black/20 dark:selection:bg-white/20">
       <Navbar />
       <HeroSection
-        logo={{
-          url: "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2zMtrqo9RMaaIn4f8F2z3oeY497/avatar.png",
-          alt: "Nexawaves Logo",
-          text: "nexawaves"
-        }}
-        slogan="DISCOVERABLE • SECURE • BEAUTIFUL • SCALABLE"
         title={
           <>
             Technology That <br />
@@ -40,7 +34,7 @@ export default function Home() {
           phone: "Fast & Beautiful",
           address: "Scalable",
         }}
-        className="pt-20 md:pt-0"
+        className="pt-24 md:pt-8"
       />
       <WhyChooseUs />
       <ServiceFeatures />

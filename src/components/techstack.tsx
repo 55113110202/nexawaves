@@ -71,13 +71,13 @@ const categories: Category[] = [
 
 export const TechStack = () => {
   return (
-    <section className="py-24 px-8 bg-primary text-white overflow-hidden relative">
+    <section className="py-16 md:py-20 px-4 md:px-8 bg-primary text-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto">
         <div className="absolute top-0 right-0 p-4 opacity-10">
           <span className="text-9xl font-black">TECH</span>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-20 gap-8 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 md:mb-16 gap-6 relative z-10">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
             Technology<br />
             That Works
