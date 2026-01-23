@@ -1,0 +1,283 @@
+.gardenContainer {
+    width: 100%;
+    height: 100%;
+    background: #F5F5DC;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align items to bottom since they are absolute mostly */
+}
+
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(180deg, #32CD32 0%, #228B22 100%);
+    z-index: 2;
+}
+
+.plant {
+    position: absolute;
+    bottom: 15%;
+    /* Adjust based on grass height */
+    transform-origin: bottom center;
+}
+
+.stem {
+    width: 6px;
+    background: linear-gradient(90deg, #228B22, #32CD32, #228B22);
+    border-radius: 3px;
+    transform-origin: bottom center;
+}
+
+.leaf {
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    background: linear-gradient(135deg, #32CD32, #228B22);
+    border-radius: 0 50% 50% 50%;
+    transform-origin: left center;
+}
+
+.leaf.right {
+    transform: scaleX(-1);
+    transform-origin: right center;
+}
+
+.rose {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.petal {
+    position: absolute;
+    border-radius: 50% 50% 50% 50%;
+    transform-origin: center bottom;
+}
+
+.roseCenter {
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #FFB6C1, #FF69B4);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* Waving animations */
+@keyframes wave1 {
+
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes wave2 {
+
+    0%,
+    100% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(-7deg);
+    }
+}
+
+@keyframes wave3 {
+
+    0%,
+    100% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(6deg);
+    }
+}
+
+@keyframes wave4 {
+
+    0%,
+    100% {
+        transform: rotate(6deg);
+    }
+
+    50% {
+        transform: rotate(-4deg);
+    }
+}
+
+.wave1 {
+    animation: wave1 3s ease-in-out infinite;
+}
+
+.wave2 {
+    animation: wave2 3.5s ease-in-out infinite;
+}
+
+.wave3 {
+    animation: wave3 2.8s ease-in-out infinite;
+}
+
+.wave4 {
+    animation: wave4 3.2s ease-in-out infinite;
+}
+
+/* Floating particles */
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 182, 193, 0.6);
+    border-radius: 50%;
+    animation: particleFloat 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-200px) translateX(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Butterfly */
+.butterfly {
+    position: absolute;
+    animation: flyAround 15s ease-in-out infinite;
+    z-index: 20;
+}
+
+.wing {
+    width: 20px;
+    height: 25px;
+    background: linear-gradient(135deg, #FF69B4, #FFB6C1);
+    border-radius: 50% 50% 20% 50%;
+    position: absolute;
+    animation: flap 0.2s ease-in-out infinite;
+}
+
+.wingLeft {
+    transform-origin: right center;
+}
+
+.wingRight {
+    left: 18px;
+    transform: scaleX(-1);
+    transform-origin: left center;
+    animation-delay: 0.1s;
+}
+
+@keyframes flap {
+
+    0%,
+    100% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(60deg);
+    }
+}
+
+@keyframes flyAround {
+    0% {
+        top: 20%;
+        left: 10%;
+    }
+
+    25% {
+        top: 30%;
+        left: 80%;
+    }
+
+    50% {
+        top: 15%;
+        left: 60%;
+    }
+
+    75% {
+        top: 40%;
+        left: 20%;
+    }
+
+    100% {
+        top: 20%;
+        left: 10%;
+    }
+}
+
+/* Sun */
+.sun {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #FFD700, #FFA500);
+    border-radius: 50%;
+    box-shadow: 0 0 40px #FFD700, 0 0 80px #FFA50080;
+    animation: sunPulse 3s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 40px #FFD700, 0 0 80px #FFA50080;
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 50px #FFD700, 0 0 100px #FFA50080;
+    }
+}
+
+/* Clouds */
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+    opacity: 0.8;
+    animation: cloudMove 20s linear infinite;
+}
+
+@keyframes cloudMove {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(600px);
+    }
+}

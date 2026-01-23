@@ -29,28 +29,28 @@ export const WhyChooseUs = ({
       title: "Design That Builds Brand Value",
       description:
         "We create visually refined, user-focused websites that elevate your brand perception and build trust with customers from the first interaction.",
-      image: "/beauty.webp",
+      image: "/beauty1.svg",
     },
     {
       id: "feature-2",
       title: "Science-Driven Growth & Visibility",
       description:
         "We combine SEO, Google My Business optimization, Generative Engine Optimization (GEO), and automated content systems to consistently amplify customer discovery and growth.",
-      image: "/growth-visibility.png",
+      image: "/science.svg",
     },
     {
       id: "feature-3",
       title: "Modern, Scalable & Secure Technology",
       description:
         "We build with the latest proven technologies to ensure your platform is fast, secure, and scalable — ready to grow with your business without performance bottlenecks.",
-      image: "/tech-security.png",
+      image: "/scalable.svg",
     },
     {
       id: "feature-4",
       title: "Conversion-Focused Systems",
       description:
         "We design every experience to guide visitors into action — turning traffic into leads, inquiries, and real customers through thoughtful UX, clear flows, and measurable outcomes.",
-      image: "/conversion-focus.png",
+      image: "/growth.svg",
     },
   ],
 }: WhyChooseUsProps) => {
@@ -76,7 +76,7 @@ export const WhyChooseUs = ({
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="flex flex-col overflow-hidden rounded-sm border border-border bg-card group"
+              className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card group"
             >
               <div className="relative aspect-square overflow-hidden bg-muted">
                 <img
