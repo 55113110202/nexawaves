@@ -80,7 +80,7 @@ export const Footer = () => {
           <div className="col-span-2 md:col-span-4 lg:col-span-3">
             <h4 className="font-bold uppercase tracking-widest text-xs mb-8 text-white/40">Contact</h4>
             <address className="not-italic text-sm space-y-4 text-white/80">
-              <p>123 Innovation Drive<br />Tech City, TC 90210</p>
+              <p>No 2A, 14th Cross, Balaji Layout<br />Bangalore, Karnataka 560056, India</p>
               <p><a href="mailto:hello@nexawaves.com" className="hover:underline">hello@nexawaves.com</a></p>
               <p>+1 (555) 123-4567</p>
             </address>

@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/ui/hero-section-2";
+import { WhyChooseUs } from "@/components/ui/why-choose-us";
 import { ServiceFeatures } from "@/components/service-features";
 import { TechStack } from "@/components/techstack";
 import { BlogGrid } from "@/components/blog-grid";
@@ -41,6 +42,7 @@ export default function Home() {
         }}
         className="pt-20 md:pt-0"
       />
+      <WhyChooseUs />
       <ServiceFeatures />
       <TechStack />
       <BlogGrid />
