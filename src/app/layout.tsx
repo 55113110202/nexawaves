@@ -3,6 +3,15 @@ import { Geist, Geist_Mono, Playfair_Display, Outfit } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { RootJsonLd } from "@/components/json-ld";
+import {
+  siteConfig,
+  pageSEO,
+  keywords,
+  generateOrganizationSchema,
+  generateLocalBusinessSchema,
+  generateWebsiteSchema,
+} from "@/lib/seo-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,28 +35,61 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Nexawaves | Technology That Brings Customers",
-  description: "We build discoverable, secure, beautiful, and scalable digital experiences for real estate, automotive, and e-commerce businesses.",
-  keywords: ["web development", "digital agency", "Next.js", "real estate websites", "automotive websites", "e-commerce", "Shopify"],
-  authors: [{ name: "Nexawaves" }],
-  creator: "Nexawaves",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${pageSEO.home.title} | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: pageSEO.home.description,
+  keywords: [...keywords.brand, ...keywords.services, ...keywords.realEstate, ...keywords.automotive, ...keywords.ecommerce],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
   openGraph: {
-    title: "Nexawaves | Technology That Brings Customers",
-    description: "We build discoverable, secure, beautiful, and scalable digital experiences.",
-    url: "https://nexawaves.com",
-    siteName: "Nexawaves",
-    locale: "en_US",
+    title: `${pageSEO.home.title} | ${siteConfig.name}`,
+    description: pageSEO.home.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} - Web Design Company in Bangalore`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nexawaves | Technology That Brings Customers",
-    description: "We build discoverable, secure, beautiful, and scalable digital experiences.",
+    title: `${pageSEO.home.title} | ${siteConfig.name}`,
+    description: pageSEO.home.description,
+    images: [`${siteConfig.url}/og-image.jpg`],
+    creator: "@nexawaves",
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -73,6 +115,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${outfit.variable} antialiased`}
       >
+        {/* JSON-LD Structured Data */}
+        <RootJsonLd
+          organization={generateOrganizationSchema()}
+          localBusiness={generateLocalBusinessSchema()}
+          website={generateWebsiteSchema()}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
