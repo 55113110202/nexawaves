@@ -2,12 +2,14 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "./button";
+import { DesignVisual, GrowthVisual, TechVisual, ConversionVisual } from "./feature-visuals";
+import { motion } from "framer-motion";
 
 interface Feature {
   id: string;
   title: string;
+  highlightWord: string;
   description: string;
-  image: string;
 }
 
 interface WhyChooseUsProps {
@@ -18,6 +20,43 @@ interface WhyChooseUsProps {
   features?: Feature[];
 }
 
+// Map feature IDs to their animated visual components
+const featureVisuals: Record<string, React.FC> = {
+  "feature-1": DesignVisual,
+  "feature-2": GrowthVisual,
+  "feature-3": TechVisual,
+  "feature-4": ConversionVisual,
+};
+
+// Animated underline component
+const AnimatedUnderline = ({ children }: { children: React.ReactNode }) => (
+  <span className="relative inline-block">
+    {children}
+    <motion.span
+      className="absolute left-0 bottom-0 h-[3px] bg-primary rounded-full"
+      initial={{ width: 0 }}
+      whileInView={{ width: "100%" }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+    />
+  </span>
+);
+
+// Render title with highlighted word
+const renderTitle = (title: string, highlightWord: string) => {
+  const parts = title.split(highlightWord);
+  if (parts.length === 1) {
+    return title;
+  }
+  return (
+    <>
+      {parts[0]}
+      <AnimatedUnderline>{highlightWord}</AnimatedUnderline>
+      {parts[1]}
+    </>
+  );
+};
+
 export const WhyChooseUs = ({
   heading = "Why Partner With Us",
   description = "We don't just build websites — we build customer acquisition systems that combine beautiful design, smart technology, and proven growth strategies.",
@@ -27,30 +66,30 @@ export const WhyChooseUs = ({
     {
       id: "feature-1",
       title: "Design That Builds Brand Value",
+      highlightWord: "Value",
       description:
         "We create visually refined, user-focused websites that elevate your brand perception and build trust with customers from the first interaction.",
-      image: "/beauty1.svg",
     },
     {
       id: "feature-2",
       title: "Science-Driven Growth & Visibility",
+      highlightWord: "Visibility",
       description:
         "We combine SEO, Google My Business optimization, Generative Engine Optimization (GEO), and automated content systems to consistently amplify customer discovery and growth.",
-      image: "/science.svg",
     },
     {
       id: "feature-3",
       title: "Modern, Scalable & Secure Technology",
+      highlightWord: "Technology",
       description:
         "We build with the latest proven technologies to ensure your platform is fast, secure, and scalable — ready to grow with your business without performance bottlenecks.",
-      image: "/scalable.svg",
     },
     {
       id: "feature-4",
       title: "Conversion-Focused Systems",
+      highlightWord: "Systems",
       description:
         "We design every experience to guide visitors into action — turning traffic into leads, inquiries, and real customers through thoughtful UX, clear flows, and measurable outcomes.",
-      image: "/growth.svg",
     },
   ],
 }: WhyChooseUsProps) => {
@@ -73,28 +112,38 @@ export const WhyChooseUs = ({
 
         {/* Features Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature) => (
-            <div
-              key={feature.id}
-              className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card group"
-            >
-              <div className="relative aspect-square overflow-hidden bg-muted">
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                />
+          {features.map((feature) => {
+            const VisualComponent = featureVisuals[feature.id];
+            return (
+              <div
+                key={feature.id}
+                className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card group"
+              >
+                <div className="relative aspect-square overflow-hidden" style={{ backgroundColor: "#C4B8AC" }}>
+                  {VisualComponent ? (
+                    <VisualComponent />
+                  ) : (
+                    <div className="h-full w-full bg-gradient-to-br from-primary/10 to-primary/5" />
+                  )}
+                </div>
+                <div className="px-6 py-8 md:px-8 md:py-10">
+                  <h3 className="text-base md:text-lg font-bold mb-4 leading-tight whitespace-nowrap relative inline-block">
+                    {feature.title}
+                    <motion.span
+                      className="absolute left-0 bottom-0 h-[2px] bg-primary/60 rounded-full"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: "100%" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+                    />
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed font-light text-sm">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-              <div className="px-6 py-8 md:px-8 md:py-10">
-                <h3 className="text-xl md:text-2xl font-bold mb-4 leading-tight">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed font-light">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA Button */}
@@ -114,3 +163,4 @@ export const WhyChooseUs = ({
     </section>
   );
 };
+

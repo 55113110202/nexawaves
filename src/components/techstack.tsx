@@ -71,8 +71,8 @@ const categories: Category[] = [
 
 export const TechStack = () => {
   return (
-    <section className="py-16 md:py-20 px-4 md:px-8 bg-primary text-white overflow-hidden relative">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 md:py-20 bg-primary text-white overflow-hidden relative">
+      <div className="container mx-auto px-4">
         <div className="absolute top-0 right-0 p-4 opacity-10">
           <span className="text-9xl font-black">TECH</span>
         </div>

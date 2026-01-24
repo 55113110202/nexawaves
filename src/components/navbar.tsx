@@ -49,10 +49,11 @@ export const Navbar = () => {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8 font-medium text-sm uppercase tracking-wide">
-                    <Link href="#services" className="hover:text-primary hover:underline underline-offset-4 decoration-1 transition-all">Services</Link>
-                    <Link href="#work" className="hover:text-primary hover:underline underline-offset-4 decoration-1 transition-all">Work</Link>
-                    <Link href="#studio" className="hover:text-primary hover:underline underline-offset-4 decoration-1 transition-all">Studio</Link>
-                    <Link href="#journal" className="hover:text-primary hover:underline underline-offset-4 decoration-1 transition-all">Journal</Link>
+                    <Link href="/about" className="hover:text-primary hover:underline underline-offset-4 decoration-1 transition-all">About</Link>
+                    <Link href="/#services" className="hover:text-primary hover:underline underline-offset-4 decoration-1 transition-all">Services</Link>
+                    <Link href="/#work" className="hover:text-primary hover:underline underline-offset-4 decoration-1 transition-all">Work</Link>
+                    <Link href="/#studio" className="hover:text-primary hover:underline underline-offset-4 decoration-1 transition-all">Studio</Link>
+                    <Link href="/#journal" className="hover:text-primary hover:underline underline-offset-4 decoration-1 transition-all">Journal</Link>
                 </nav>
 
                 {/* Actions */}
