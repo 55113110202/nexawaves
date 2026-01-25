@@ -10,7 +10,7 @@ const features = [
         category: "Real Estate",
         title: "Immersive Property Experiences",
         description: "In a crowded market, your properties need to stand out. Our real estate solutions combine high-fidelity imagery, virtual tours, and SEO-optimized listings to capture buyer interest instantly.",
-        image: "/placeholder.jpg", // Ideally replace with a real estate specific image
+        image: "/realestate.svg",
         points: ["Interactive Maps", "Virtual Tours", "Lead Generation CRM"],
         alignment: "left"
     },
@@ -18,7 +18,7 @@ const features = [
         category: "Automotive",
         title: "Digital Showrooms for Modern Dealerships",
         description: "Shift gears with a website that matches the performance of the cars you sell. We build high-speed, inventory-synced platforms that turn visitors into test-drivers.",
-        image: "/placeholder.jpg",
+        image: "/automotive.svg",
         points: ["Inventory Sync", "Financing Calculators", "High-Res Galleries"],
         alignment: "right"
     },
@@ -51,14 +51,12 @@ export const ServiceFeatures = () => {
                         )}>
                             {/* Image Side */}
                             <div className="w-full lg:w-1/2 relative group">
-                                <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-muted">
-                                    {/* Placeholder gradient until images are ready */}
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-neutral-200 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800" />
+                                <div className="relative aspect-square overflow-hidden rounded-2xl bg-muted">
                                     <Image
                                         src={feature.image}
                                         alt={feature.title}
                                         fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-50 mix-blend-overlay"
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
 
                                     {/* Decorative Elements */}
