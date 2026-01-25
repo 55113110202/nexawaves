@@ -29,8 +29,8 @@ export default function AutomotiveSolutionsPage() {
                         variants={fadeInUp}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-6 block">
-                            Automotive Solutions
+                        <span className="text-sm font-bold text-primary mb-6 block">
+                            Automotive solutions
                         </span>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-[family-name:var(--font-outfit)] mb-8">
                             Your Digital Showroom That Sells{" "}
@@ -40,8 +40,8 @@ export default function AutomotiveSolutionsPage() {
                             While you're closing deals at the showroom, your website should be generating
                             new leads. If buyers can't find you online, they'll find your competitor.
                         </p>
-                        <Button size="lg" className="rounded-full text-sm font-bold uppercase tracking-wider h-14 px-10">
-                            Get Your Free Demo <ArrowRight className="w-4 h-4 ml-2" />
+                        <Button size="lg" className="h-14 px-10">
+                            Get your free demo <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
                     </motion.div>
                 </div>
@@ -105,8 +105,8 @@ export default function AutomotiveSolutionsPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <span className="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-4 block">
-                            The Solution
+                        <span className="text-sm font-bold text-primary mb-4 block">
+                            The solution
                         </span>
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 font-[family-name:var(--font-outfit)]">
                             Your Complete Digital Automotive Platform
@@ -392,55 +392,13 @@ export default function AutomotiveSolutionsPage() {
                 </div>
             </section>
 
-            {/* COST COMPARISON */}
-            <section className="py-20 bg-muted/30">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center font-[family-name:var(--font-outfit)]">
-                        What Would This Cost To Build?
-                    </h2>
-                    <p className="text-center text-muted-foreground mb-12">
-                        If you went to a software company and asked them to build this from scratch:
-                    </p>
-                    <div className="overflow-hidden rounded-2xl border border-border bg-background">
-                        <table className="w-full">
-                            <thead className="bg-card">
-                                <tr>
-                                    <th className="px-6 py-4 text-left font-bold">Item</th>
-                                    <th className="px-6 py-4 text-right font-bold">Market Cost</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {[
-                                    ["Premium website design", "₹2-3 lakh"],
-                                    ["Inventory management system", "₹3-4 lakh"],
-                                    ["Lead capture with OTP", "₹1-2 lakh"],
-                                    ["Mobile-friendly development", "₹1-2 lakh"],
-                                    ["Admin dashboard", "₹2-3 lakh"],
-                                    ["Hosting & domain (yearly)", "₹15-25K"]
-                                ].map(([item, cost], i) => (
-                                    <tr key={i} className={i % 2 === 0 ? "" : "bg-card/50"}>
-                                        <td className="px-6 py-4 border-b border-border">{item}</td>
-                                        <td className="px-6 py-4 text-right border-b border-border text-muted-foreground">{cost}</td>
-                                    </tr>
-                                ))}
-                                <tr className="bg-primary text-primary-foreground font-bold">
-                                    <td className="px-6 py-4">Total</td>
-                                    <td className="px-6 py-4 text-right">₹10-15 lakh+</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p className="text-center text-2xl font-bold mt-8 font-[family-name:var(--font-outfit)]">
-                        But you won't pay that.
-                    </p>
-                </div>
-            </section>
+
 
             {/* CTA SECTION */}
             <section className="py-24 bg-primary text-primary-foreground">
                 <div className="container mx-auto px-4 text-center max-w-3xl">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 font-[family-name:var(--font-outfit)]">
-                        Ready To Go Digital?
+                        Ready to go digital?
                     </h2>
                     <p className="text-xl opacity-90 mb-8">
                         Your complete automotive website — ready to launch in days, not months.
@@ -459,8 +417,8 @@ export default function AutomotiveSolutionsPage() {
                             </span>
                         ))}
                     </div>
-                    <Button size="lg" variant="secondary" className="rounded-full text-sm font-bold uppercase tracking-wider h-14 px-10">
-                        Get Your Free Demo <ArrowRight className="w-4 h-4 ml-2" />
+                    <Button size="lg" variant="secondary" className="h-14 px-10">
+                        Get your free demo <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                     <p className="mt-8 text-lg italic font-[family-name:var(--font-playfair)] opacity-80">
                         "Your next customer is searching online right now. Will they find you?"

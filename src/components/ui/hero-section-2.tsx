@@ -133,7 +133,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                                     <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
                                         <motion.a
                                             href={primaryCTA.href}
-                                            className="inline-flex items-center justify-center h-12 px-6 md:h-14 md:px-8 bg-primary text-primary-foreground font-bold text-xs uppercase tracking-widest rounded-none transition-all hover:bg-primary/90 hover:scale-[1.02]"
+                                            className="inline-flex items-center justify-center h-12 px-6 md:h-14 md:px-8 bg-primary text-primary-foreground font-bold rounded-full transition-all hover:bg-primary/90 hover:scale-[1.02]"
                                             variants={itemVariants}
                                         >
                                             {primaryCTA.text}
@@ -141,7 +141,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                                         {secondaryCTA && (
                                             <motion.a
                                                 href={secondaryCTA.href}
-                                                className="inline-flex items-center justify-center h-12 px-6 md:h-14 md:px-8 border-2 border-primary text-primary font-bold text-xs uppercase tracking-widest rounded-none transition-all hover:bg-primary hover:text-primary-foreground"
+                                                className="inline-flex items-center justify-center h-12 px-6 md:h-14 md:px-8 border-2 border-primary text-primary font-bold rounded-full transition-all hover:bg-primary hover:text-primary-foreground"
                                                 variants={itemVariants}
                                             >
                                                 {secondaryCTA.text}

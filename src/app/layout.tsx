@@ -12,6 +12,7 @@ import {
   generateLocalBusinessSchema,
   generateWebsiteSchema,
 } from "@/lib/seo-config";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -128,6 +129,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <WhatsAppButton />
         </ThemeProvider>
       </body>
     </html>

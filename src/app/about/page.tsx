@@ -19,7 +19,7 @@ export default function AboutPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-6 block">
+                        <span className="text-sm font-bold text-primary mb-6 block">
                             More than a service provider
                         </span>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-[family-name:var(--font-outfit)] mb-8">
@@ -46,7 +46,7 @@ export default function AboutPage() {
                             className="p-8 border border-border/50 bg-background rounded-2xl h-full flex flex-col"
                         >
                             <h3 className="text-3xl font-bold mb-2 font-[family-name:var(--font-outfit)]">Research</h3>
-                            <p className="text-primary font-medium tracking-wide text-sm uppercase mb-6">before design</p>
+                            <p className="text-primary font-medium text-sm mb-6">before design</p>
                             <p className="text-muted-foreground leading-relaxed">
                                 We don’t believe in guesswork. Before a single pixel is placed, we dive deep into your industry, analyzing competitor gaps and customer intent. We identify exactly how your audience searches and what they need to ensure the final product answers their questions instantly.
                             </p>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                             className="p-8 border border-border/50 bg-background rounded-2xl h-full flex flex-col"
                         >
                             <h3 className="text-3xl font-bold mb-2 font-[family-name:var(--font-outfit)] text-primary">Strategy</h3>
-                            <p className="text-foreground font-medium tracking-wide text-sm uppercase mb-6">before execution</p>
+                            <p className="text-foreground font-medium text-sm mb-6">before execution</p>
                             <p className="text-muted-foreground leading-relaxed">
                                 A website without a plan is just a digital brochure. We map out the entire customer journey—from the first click to the final conversion. Our strategy defines the content hierarchy, user flows, and call-to-action placement to guide every visitor effortlessly toward becoming a customer.
                             </p>
@@ -72,7 +72,7 @@ export default function AboutPage() {
                             className="p-8 border border-border/50 bg-background rounded-2xl h-full flex flex-col"
                         >
                             <h3 className="text-3xl font-bold mb-2 font-[family-name:var(--font-outfit)]">Systems</h3>
-                            <p className="text-primary font-medium tracking-wide text-sm uppercase mb-6">before scale</p>
+                            <p className="text-primary font-medium text-sm mb-6">before scale</p>
                             <p className="text-muted-foreground leading-relaxed">
                                 Growth shouldn't break your business. We build digital foundations ready to scale from day one. By implementing robust CMS structures, automated workflows, and clean code, we ensure your technology handles increased traffic and content without constant manual maintenance.
                             </p>
@@ -118,7 +118,7 @@ export default function AboutPage() {
             {/* 4. PROCESS (Research-First) */}
             <section className="py-24 container mx-auto px-4">
                 <div className="max-w-3xl mx-auto">
-                    <span className="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-4 block">Our Process</span>
+                    <span className="text-sm font-bold text-primary mb-4 block">Our process</span>
                     <h2 className="text-3xl md:text-4xl font-bold mb-8 font-[family-name:var(--font-outfit)]">Research-First Approach</h2>
                     <p className="text-lg text-muted-foreground mb-12">
                         Before a single interface is designed, we invest time in understanding:
@@ -159,7 +159,7 @@ export default function AboutPage() {
                             </div>
                         ))}
                     </div>
-                    <p className="mt-16 text-lg tracking-wide uppercase font-bold text-muted-foreground">
+                    <p className="mt-16 text-lg font-bold text-muted-foreground">
                         Building digital foundations that support growth for years.
                     </p>
                 </div>

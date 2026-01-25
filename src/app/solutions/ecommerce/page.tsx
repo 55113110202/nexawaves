@@ -29,8 +29,8 @@ export default function EcommerceSolutionsPage() {
                         variants={fadeInUp}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-6 block">
-                            E-Commerce Solutions
+                        <span className="text-sm font-bold text-primary mb-6 block">
+                            E-commerce solutions
                         </span>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-[family-name:var(--font-outfit)] mb-8">
                             Not Another Shopify Site.<br />
@@ -41,8 +41,8 @@ export default function EcommerceSolutionsPage() {
                             branded storefronts powered by Shopify & WordPress — with SEO and discoverability
                             built from the foundation, not as an afterthought.
                         </p>
-                        <Button size="lg" className="rounded-full text-sm font-bold uppercase tracking-wider h-14 px-10">
-                            Get Your Free Demo <ArrowRight className="w-4 h-4 ml-2" />
+                        <Button size="lg" className="h-14 px-10">
+                            Get your free demo <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
                     </motion.div>
                 </div>
@@ -106,8 +106,8 @@ export default function EcommerceSolutionsPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <span className="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-4 block">
-                            The Nexa Waves Difference
+                        <span className="text-sm font-bold text-primary mb-4 block">
+                            The Nexa Waves difference
                         </span>
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 font-[family-name:var(--font-outfit)]">
                             Spectacular Design. Powerful Platform. Found Everywhere.
@@ -194,7 +194,7 @@ export default function EcommerceSolutionsPage() {
                                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                                     {feature.description}
                                 </p>
-                                <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                                <span className="text-xs font-bold text-primary tracking-wider">
                                     {feature.highlight}
                                 </span>
                             </motion.div>
@@ -399,7 +399,7 @@ export default function EcommerceSolutionsPage() {
             <section className="py-24 bg-primary text-primary-foreground">
                 <div className="container mx-auto px-4 text-center max-w-3xl">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 font-[family-name:var(--font-outfit)]">
-                        Ready For a Store That Actually Stands Out?
+                        Ready for a store that actually stands out?
                     </h2>
                     <p className="text-xl opacity-90 mb-8">
                         Your brand deserves more than a template. Let's build something spectacular.
@@ -418,8 +418,8 @@ export default function EcommerceSolutionsPage() {
                             </span>
                         ))}
                     </div>
-                    <Button size="lg" variant="secondary" className="rounded-full text-sm font-bold uppercase tracking-wider h-14 px-10">
-                        Get Your Free Demo <ArrowRight className="w-4 h-4 ml-2" />
+                    <Button size="lg" variant="secondary" className="h-14 px-10">
+                        Get your free demo <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                     <p className="mt-8 text-lg italic font-[family-name:var(--font-playfair)] opacity-80">
                         "It's not just another Shopify site. It's your brand and customer engine."

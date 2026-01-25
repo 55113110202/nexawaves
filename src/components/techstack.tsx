@@ -74,7 +74,7 @@ export const TechStack = () => {
     <section className="py-16 md:py-20 bg-primary text-white overflow-hidden relative">
       <div className="container mx-auto px-4">
         <div className="absolute top-0 right-0 p-4 opacity-10">
-          <span className="text-9xl font-black">TECH</span>
+          <span className="text-9xl font-black">Tech</span>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 md:mb-16 gap-6 relative z-10">
@@ -91,7 +91,7 @@ export const TechStack = () => {
           {categories.map((cat, catIndex) => (
             <div key={catIndex} className="flex flex-col">
               <h3 className={cn(
-                "text-xs font-bold uppercase tracking-widest mb-6 border-l-2 pl-3",
+                "text-xs font-bold mb-6 border-l-2 pl-3",
                 cat.title === "Infrastructure" ? "text-white border-white" : "text-white/50 border-white/20"
               )}>
                 {cat.title}
@@ -119,7 +119,7 @@ export const TechStack = () => {
                       </svg>
                     )}
                     <span className={cn(
-                      "text-[10px] font-bold uppercase tracking-[0.2em] transition-colors text-center",
+                      "text-[10px] font-bold transition-colors text-center",
                       cat.title === "Infrastructure" ? "text-white" : "text-white"
                     )}>
                       {tech.name}

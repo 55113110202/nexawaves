@@ -21,11 +21,11 @@ export default function Home() {
         }
         subtitle="We build systems that turn attention into consistent customer flow."
         primaryCTA={{
-          text: "GET MORE CUSTOMERS",
+          text: "Get more customers",
           href: "#contact",
         }}
         secondaryCTA={{
-          text: "SEE HOW IT WORKS",
+          text: "See how it works",
           href: "#services",
         }}
         backgroundImage="/hero-image.webp"

@@ -41,11 +41,11 @@ export const BlogGrid = () => {
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-end mb-12">
                     <div>
-                        <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2 block">The Journal</span>
+                        <span className="text-xs font-bold text-muted-foreground mb-2 block">The journal</span>
                         <h2 className="text-3xl md:text-4xl font-bold">Latest Insights</h2>
                     </div>
                     <Button variant="link" className="text-primary hidden md:flex items-center gap-2 hover:translate-x-1 transition-transform">
-                        Read All Articles <ArrowUpRight className="w-4 h-4" />
+                        Read all articles <ArrowUpRight className="w-4 h-4" />
                     </Button>
                 </div>
 
@@ -54,13 +54,13 @@ export const BlogGrid = () => {
                         <div key={i} className="group cursor-pointer flex flex-col h-full bg-background border border-border p-6 hover:shadow-lg transition-shadow duration-300">
                             <div className="mb-6 aspect-[3/2] bg-muted relative overflow-hidden">
                                 <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800 transition-transform duration-500 group-hover:scale-105"></div>
-                                <div className="absolute top-4 left-4 bg-background px-2 py-1 text-[10px] font-bold uppercase tracking-widest">
+                                <div className="absolute top-4 left-4 bg-background px-2 py-1 text-[10px] font-bold">
                                     {article.category}
                                 </div>
                             </div>
 
                             <div className="flex-1 flex flex-col">
-                                <div className="flex justify-between items-center mb-3 text-xs text-muted-foreground uppercase tracking-wider">
+                                <div className="flex justify-between items-center mb-3 text-xs text-muted-foreground underline-offset-4">
                                     <span>{article.date}</span>
                                     <span>{article.author}</span>
                                 </div>
@@ -70,8 +70,8 @@ export const BlogGrid = () => {
                                 <p className="text-sm text-muted-foreground line-clamp-3 mb-4 flex-1">
                                     {article.excerpt}
                                 </p>
-                                <div className="pt-4 border-t border-border/50 flex items-center text-xs font-bold uppercase tracking-widest text-primary opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                                    Read Article <ArrowUpRight className="w-3 h-3 ml-1" />
+                                <div className="pt-4 border-t border-border/50 flex items-center text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
+                                    Read article <ArrowUpRight className="w-3 h-3 ml-1" />
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@ export const BlogGrid = () => {
                 </div>
 
                 <div className="mt-8 text-center md:hidden">
-                    <Button variant="outline" className="w-full h-12 uppercase text-xs font-bold tracking-widest">Read All Articles</Button>
+                    <Button variant="outline" className="w-full h-12 text-xs font-bold">Read all articles</Button>
                 </div>
             </div>
         </section>

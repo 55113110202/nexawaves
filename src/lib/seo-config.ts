@@ -18,7 +18,7 @@ export const siteConfig = {
         },
         email: "hello@nexawaves.com",
         // TODO: Add real phone number
-        phone: "+91-XXXXXXXXXX",
+        phone: "+91 63601 14438",
     },
 
     // Social Links (update with real URLs)

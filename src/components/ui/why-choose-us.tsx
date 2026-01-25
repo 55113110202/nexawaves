@@ -98,8 +98,8 @@ export const WhyChooseUs = ({
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 md:mb-16 text-center max-w-3xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
-            Why Choose Us
+          <span className="text-xs font-bold text-primary mb-4 block">
+            Why choose us
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {heading}
@@ -150,11 +150,11 @@ export const WhyChooseUs = ({
         <div className="mt-16 text-center">
           <Button
             variant="outline"
-            className="group rounded-none border-primary text-primary hover:bg-primary hover:text-primary-foreground uppercase text-xs font-bold tracking-widest h-12 px-6 md:h-14 md:px-8"
+            className="group border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm font-bold h-12 px-6 md:h-14 md:px-8"
             asChild
           >
             <a href={linkUrl}>
-              {linkText}
+              Start your project
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
