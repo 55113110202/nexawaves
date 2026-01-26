@@ -5,8 +5,8 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import {
-    Car, Phone, Briefcase, Star, Shield, ArrowRight, Check,
-    Users, Clock, Trophy, Zap, Globe, Smartphone, Search as SearchIcon
+    Palette, Shield, TrendingUp, Share2, Clock, ArrowRight, Check,
+    Car, Star, Zap, MessageSquare, Globe
 } from "lucide-react";
 
 // Animation variants
@@ -14,6 +14,79 @@ const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 }
 };
+
+// 5 Core Advantages Data - Automotive Focused
+const coreAdvantages = [
+    {
+        icon: Palette,
+        title: "Aesthetics",
+        tagline: "Look Premium, Look Established",
+        result: "Buyers trust you before they even visit your showroom.",
+        features: [
+            "Modern, high-end design that matches your showroom quality",
+            "Beautiful vehicle galleries with photos, specs & pricing",
+            "Clean layout that feels like a branded dealership",
+            "Perfect experience on mobile, tablet & desktop"
+        ]
+    },
+    {
+        icon: Shield,
+        title: "Trust",
+        tagline: "Believe You Before They Visit",
+        result: "Customers walk in confident and ready to buy.",
+        features: [
+            "Live Google reviews displayed on the website",
+            "Real customer testimonials & happy buyer photos",
+            "OTP-verified inquiries only (no time-wasters)",
+            "Secure website with privacy & data protection"
+        ]
+    },
+    {
+        icon: TrendingUp,
+        title: "Growth",
+        tagline: "More Leads, Better Quality",
+        result: "Higher conversions with less effort.",
+        features: [
+            "Leads captured from every vehicle listing",
+            "Smart search & filters help buyers shortlist themselves",
+            "Test drive booking system built-in",
+            "Central dashboard to manage inventory & inquiries"
+        ]
+    },
+    {
+        icon: Share2,
+        title: "Virality",
+        tagline: "Your Vehicles Sell Themselves",
+        result: "Customers market your inventory for you.",
+        features: [
+            "Share one clean link instead of sending images repeatedly",
+            "Vehicles look professional when shared on WhatsApp & social media",
+            "Easy forwarding by customers to family & friends",
+            "Blog & updates improve Google visibility"
+        ]
+    },
+    {
+        icon: Clock,
+        title: "Time",
+        tagline: "Stop Explaining, Start Closing",
+        result: "You save time every day and close deals faster.",
+        features: [
+            "No more repeating specs on calls or WhatsApp",
+            "Price, features, mileage, photos — everything shown clearly",
+            "Customers come informed and test-drive-ready",
+            "Less follow-ups, faster closures"
+        ]
+    }
+];
+
+// Advantages Summary Table
+const advantagesSummary = [
+    { advantage: "Aesthetics", benefit: "Premium dealership perception" },
+    { advantage: "Trust", benefit: "Confidence before first visit" },
+    { advantage: "Growth", benefit: "Consistent, quality leads" },
+    { advantage: "Virality", benefit: "Organic reach & referrals" },
+    { advantage: "Time", benefit: "Faster decisions, less effort" }
+];
 
 export default function AutomotiveSolutionsPage() {
     return (
@@ -33,13 +106,32 @@ export default function AutomotiveSolutionsPage() {
                             Automotive solutions
                         </span>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-[family-name:var(--font-outfit)] mb-8">
-                            Your Digital Showroom That Sells{" "}
-                            <span className="text-primary italic font-[family-name:var(--font-playfair)]">24/7</span>
+                            Not Just a Website.{" "}
+                            <span className="text-primary italic font-[family-name:var(--font-playfair)]">A Growth Engine.</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light mb-10">
-                            While you're closing deals at the showroom, your website should be generating
-                            new leads. If buyers can't find you online, they'll find your competitor.
+                        <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light mb-6">
+                            An aesthetically designed digital showroom elevates your brand and builds instant trust with buyers.
                         </p>
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light mb-10">
+                            <strong className="text-foreground">The right technology gives you worldwide reach</strong> — connecting you with customers you never imagined, selling cars for you 24/7.
+                        </p>
+
+                        {/* Value Props */}
+                        <div className="flex flex-wrap justify-center gap-4 mb-10">
+                            <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2">
+                                <Palette className="w-4 h-4 text-primary" />
+                                <span className="text-sm font-medium">Premium Design</span>
+                            </div>
+                            <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2">
+                                <Shield className="w-4 h-4 text-primary" />
+                                <span className="text-sm font-medium">Instant Trust</span>
+                            </div>
+                            <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2">
+                                <Globe className="w-4 h-4 text-primary" />
+                                <span className="text-sm font-medium">Worldwide Reach</span>
+                            </div>
+                        </div>
+
                         <Button size="lg" className="h-14 px-10">
                             Get your free demo <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
@@ -47,7 +139,7 @@ export default function AutomotiveSolutionsPage() {
                 </div>
             </section>
 
-            {/* PROBLEM STATEMENT */}
+            {/* PAIN POINTS SECTION */}
             <section className="py-20 bg-card border-y border-border">
                 <div className="container mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
@@ -58,22 +150,18 @@ export default function AutomotiveSolutionsPage() {
                             transition={{ duration: 0.8 }}
                         >
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-[family-name:var(--font-outfit)]">
-                                Still Relying Only on{" "}
-                                <span className="text-primary">Walk-ins & Referrals?</span>
+                                Sound Familiar?
                             </h2>
-                            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                                Today's car buyers research online before visiting any showroom.
-                                They compare prices, check specifications, and read reviews — all from their phone.
-                                If you're not there, you've already lost.
-                            </p>
-                            <ul className="space-y-3">
+                            <ul className="space-y-4">
                                 {[
-                                    "90% of buyers research online before visiting",
-                                    "Your inventory should be visible 24/7",
-                                    "Competitors with websites get more leads"
+                                    "You keep sending the same car photos on WhatsApp, again and again",
+                                    "Buyers ask about price, mileage, and features you've explained 100 times",
+                                    "Time-wasters visit with no intention to buy",
+                                    "Bigger dealerships with fancy websites get more walk-ins",
+                                    "Your inventory isn't visible to buyers searching online"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-foreground">
-                                        <Check className="w-5 h-5 text-primary shrink-0" />
+                                    <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                                        <div className="w-2 h-2 bg-destructive rounded-full mt-2 shrink-0"></div>
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -87,9 +175,9 @@ export default function AutomotiveSolutionsPage() {
                             className="aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center"
                         >
                             <div className="text-center p-8">
-                                <Car className="w-20 h-20 text-primary mx-auto mb-4 opacity-50" />
+                                <MessageSquare className="w-20 h-20 text-primary mx-auto mb-4 opacity-50" />
                                 <p className="text-lg font-medium text-muted-foreground">
-                                    "Let me search online first"<br />— Every modern car buyer
+                                    "Send me photos and price"<br />— Every buyer, every time
                                 </p>
                             </div>
                         </motion.div>
@@ -109,129 +197,122 @@ export default function AutomotiveSolutionsPage() {
                             The solution
                         </span>
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 font-[family-name:var(--font-outfit)]">
-                            Your Complete Digital Automotive Platform
+                            Why This Platform Changes Your Business
                         </h2>
                         <p className="text-xl text-muted-foreground leading-relaxed">
-                            A stunning, professional website that showcases your inventory like a premium brand —
-                            <strong className="text-foreground"> whether you have 10 cars or 1000.</strong>
+                            This is not just a website. It's a{" "}
+                            <strong className="text-foreground">digital showroom</strong> +{" "}
+                            <strong className="text-foreground">trust builder</strong> +{" "}
+                            <strong className="text-foreground">growth engine</strong> that works 24/7.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* 5 FEATURE BLOCKS */}
+            {/* 5 CORE ADVANTAGES - GRID BLOCKS */}
             <section className="py-16 bg-muted/30">
                 <div className="container mx-auto px-4">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        {[
-                            {
-                                icon: Car,
-                                title: "Showcase Your Inventory",
-                                items: [
-                                    "High-quality photo galleries per vehicle",
-                                    "Detailed specs (make, model, year, mileage, price)",
-                                    "360° interior/exterior views",
-                                    "Smart search & filter by budget, brand, type",
-                                    "Mobile-optimized browsing"
-                                ]
-                            },
-                            {
-                                icon: Phone,
-                                title: "Capture Every Lead",
-                                items: [
-                                    "Inquiry forms on every vehicle page",
-                                    "OTP verification — genuine buyers only",
-                                    "Test drive booking system",
-                                    "WhatsApp integration for quick contact"
-                                ]
-                            },
-                            {
-                                icon: Briefcase,
-                                title: "Highlight Your Services",
-                                items: [
-                                    "New Car Sales",
-                                    "Pre-Owned / Used Cars",
-                                    "Car Financing & Loans",
-                                    "Insurance Services",
-                                    "Vehicle Exchange Program"
-                                ]
-                            },
-                            {
-                                icon: Star,
-                                title: "Build Trust & Credibility",
-                                items: [
-                                    "Live Google rating on homepage",
-                                    "Customer testimonials & reviews",
-                                    "Stats counter (cars sold, happy customers)",
-                                    "About us with team photos",
-                                    "Blog for car tips & market updates"
-                                ]
-                            },
-                            {
-                                icon: Shield,
-                                title: "Customers Feel Safe",
-                                items: [
-                                    "Secure website with SSL encryption",
-                                    "Verified dealer badge",
-                                    "Transparent pricing display",
-                                    "Privacy policy included"
-                                ]
-                            }
-                        ].map((feature, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="bg-background p-8 rounded-2xl border border-border"
-                            >
-                                <feature.icon className="w-10 h-10 text-primary mb-4" />
-                                <h3 className="text-xl font-bold mb-4 font-[family-name:var(--font-outfit)]">
-                                    {feature.title}
-                                </h3>
-                                <ul className="space-y-2">
-                                    {feature.items.map((item, j) => (
-                                        <li key={j} className="flex items-start gap-2 text-muted-foreground text-sm">
-                                            <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </motion.div>
-                        ))}
+                    <div className="max-w-6xl mx-auto">
+                        {/* First row - 3 columns */}
+                        <div className="grid md:grid-cols-3 gap-6 mb-6">
+                            {coreAdvantages.slice(0, 3).map((advantage, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="bg-background p-6 md:p-8 rounded-2xl border border-border h-full flex flex-col"
+                                >
+                                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                                        <advantage.icon className="w-6 h-6 text-primary" />
+                                    </div>
+                                    <h3 className="text-xl font-bold font-[family-name:var(--font-outfit)] mb-1">
+                                        {advantage.title}
+                                    </h3>
+                                    <p className="text-primary font-medium text-sm mb-4">
+                                        {advantage.tagline}
+                                    </p>
+                                    <ul className="space-y-2 mb-6 flex-grow">
+                                        {advantage.features.map((feature, j) => (
+                                            <li key={j} className="flex items-start gap-2 text-muted-foreground text-sm">
+                                                <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div className="bg-primary/5 border border-primary/20 rounded-lg p-3 mt-auto">
+                                        <p className="text-xs font-medium">
+                                            <span className="text-primary">Result:</span>{" "}
+                                            <span className="text-foreground">{advantage.result}</span>
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                        {/* Second row - 2 columns */}
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {coreAdvantages.slice(3, 5).map((advantage, index) => (
+                                <motion.div
+                                    key={index + 3}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: (index + 3) * 0.1 }}
+                                    className="bg-background p-6 md:p-8 rounded-2xl border border-border h-full flex flex-col"
+                                >
+                                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                                        <advantage.icon className="w-6 h-6 text-primary" />
+                                    </div>
+                                    <h3 className="text-xl font-bold font-[family-name:var(--font-outfit)] mb-1">
+                                        {advantage.title}
+                                    </h3>
+                                    <p className="text-primary font-medium text-sm mb-4">
+                                        {advantage.tagline}
+                                    </p>
+                                    <ul className="space-y-2 mb-6 flex-grow">
+                                        {advantage.features.map((feature, j) => (
+                                            <li key={j} className="flex items-start gap-2 text-muted-foreground text-sm">
+                                                <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div className="bg-primary/5 border border-primary/20 rounded-lg p-3 mt-auto">
+                                        <p className="text-xs font-medium">
+                                            <span className="text-primary">Result:</span>{" "}
+                                            <span className="text-foreground">{advantage.result}</span>
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* FEATURE TABLE */}
+            {/* SUMMARY TABLE - One Platform, Five Advantages */}
             <section className="py-20">
                 <div className="container mx-auto px-4 max-w-4xl">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center font-[family-name:var(--font-outfit)]">
-                        Features That Make You <span className="text-primary">Stand Out</span>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center font-[family-name:var(--font-outfit)]">
+                        One Platform. <span className="text-primary">Five Big Advantages.</span>
                     </h2>
+                    <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                        Every feature is designed with one goal: selling more cars
+                    </p>
                     <div className="overflow-hidden rounded-2xl border border-border">
                         <table className="w-full">
                             <thead className="bg-primary text-primary-foreground">
                                 <tr>
-                                    <th className="px-6 py-4 text-left font-bold">Feature</th>
-                                    <th className="px-6 py-4 text-left font-bold">How It Helps You</th>
+                                    <th className="px-6 py-4 text-left font-bold">Advantage</th>
+                                    <th className="px-6 py-4 text-left font-bold">What It Gives You</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {[
-                                    ["Premium Design", "Look like a branded showroom — impress buyers instantly"],
-                                    ["OTP Verified Leads", "No time wasters — only genuine buyers contact you"],
-                                    ["Vehicle Submission Portal", "Owners can submit their cars for consignment"],
-                                    ["Compare Vehicles", "Buyers can compare specs side-by-side"],
-                                    ["EMI Calculator", "Show monthly payment options on every car"],
-                                    ["SEO Ready", "Rank on Google when people search 'cars for sale in [city]'"],
-                                    ["Lightning Fast", "Website loads instantly — buyers don't wait"],
-                                    ["Works Everywhere", "Perfect on phone, tablet, laptop, desktop"]
-                                ].map(([feature, benefit], i) => (
+                                {advantagesSummary.map((row, i) => (
                                     <tr key={i} className={i % 2 === 0 ? "bg-card" : "bg-background"}>
-                                        <td className="px-6 py-4 font-medium border-b border-border">{feature}</td>
-                                        <td className="px-6 py-4 text-muted-foreground border-b border-border">{benefit}</td>
+                                        <td className="px-6 py-4 font-bold border-b border-border">{row.advantage}</td>
+                                        <td className="px-6 py-4 text-muted-foreground border-b border-border">{row.benefit}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -249,18 +330,20 @@ export default function AutomotiveSolutionsPage() {
                     <div className="grid sm:grid-cols-2 gap-4">
                         {[
                             "Premium Landing Page",
-                            "Vehicle Inventory Page",
+                            "Vehicle Inventory Page with Filters",
                             "Individual Vehicle Detail Pages",
                             "Service Pages (Sales, Finance, Insurance)",
-                            "Contact/Reach Us Page",
-                            "Vehicle Submission Portal",
                             "Test Drive Booking System",
-                            "Blog Section",
-                            "About Us Page",
-                            "FAQ Section",
+                            "Contact Page with OTP Verification",
+                            "Vehicle Comparison Tool",
+                            "EMI Calculator Widget",
+                            "Blog Section for Updates",
+                            "About Us & Team Page",
+                            "Live Google Reviews Integration",
                             "Testimonials Section",
                             "Admin Dashboard",
-                            "EMI Calculator Widget",
+                            "Mobile-Optimized Design",
+                            "SEO & Google Business Ready",
                             "Privacy Policy & Terms Pages"
                         ].map((item, i) => (
                             <motion.div
@@ -279,40 +362,6 @@ export default function AutomotiveSolutionsPage() {
                 </div>
             </section>
 
-            {/* BENEFITS GRID */}
-            <section className="py-20">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center font-[family-name:var(--font-outfit)]">
-                        Your Website Will Help You...
-                    </h2>
-                    <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                        Every feature is designed with one goal: selling more cars
-                    </p>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-                        {[
-                            { icon: Users, title: "Get More Leads", desc: "Inquiries 24/7. OTP means only serious buyers." },
-                            { icon: Trophy, title: "Look Premium", desc: "Website that matches your showroom's quality." },
-                            { icon: Clock, title: "Save Time", desc: "Buyers browse inventory before calling." },
-                            { icon: Zap, title: "Sell Faster", desc: "More visibility = quicker inventory turnover." },
-                            { icon: Globe, title: "Expand Reach", desc: "Reach buyers beyond your local area." }
-                        ].map((benefit, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="text-center p-6 bg-card rounded-2xl border border-border"
-                            >
-                                <benefit.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                                <h3 className="font-bold mb-2">{benefit.title}</h3>
-                                <p className="text-sm text-muted-foreground">{benefit.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* PROCESS SECTION */}
             <section className="py-20 bg-card border-y border-border">
                 <div className="container mx-auto px-4 max-w-4xl">
@@ -324,9 +373,9 @@ export default function AutomotiveSolutionsPage() {
                             <h3 className="text-xl font-bold mb-6 text-center">What You Do</h3>
                             <ul className="space-y-4">
                                 {[
-                                    "Share your logo & branding",
-                                    "Provide vehicle inventory",
-                                    "Tell us your services",
+                                    "Share your logo & brand colors",
+                                    "Provide vehicle inventory & photos",
+                                    "Tell us about your services",
                                     "Start selling!"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-muted-foreground">
@@ -340,10 +389,10 @@ export default function AutomotiveSolutionsPage() {
                             <h3 className="text-xl font-bold mb-6 text-center">What We Do</h3>
                             <ul className="space-y-4">
                                 {[
-                                    "Set up the complete website",
-                                    "Upload your inventory",
-                                    "Configure all features",
-                                    "Handle hosting & updates"
+                                    "Design & build your complete website",
+                                    "Upload your entire inventory",
+                                    "Configure all features & integrations",
+                                    "Handle hosting & ongoing maintenance"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3">
                                         <span className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">{i + 1}</span>
@@ -360,13 +409,13 @@ export default function AutomotiveSolutionsPage() {
             <section className="py-20">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center font-[family-name:var(--font-outfit)]">
-                        What Other Dealers Are <span className="text-primary">Saying</span>
+                        What Dealers Are <span className="text-primary">Saying</span>
                     </h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            "I was skeptical at first, but now I get 20+ inquiries every week from the website. Many customers come already decided on a car!",
-                            "The test drive booking feature is brilliant. Customers book online, I just confirm. No back-and-forth on calls.",
-                            "My showroom looks small but my website looks huge. Customers think I'm a big dealer. Perfect for building trust!"
+                            "I used to send car photos 15 times a day. Now I share one link and buyers come to the showroom already knowing what they want.",
+                            "The test drive booking system is brilliant. Customers book online, I just confirm. No more back-and-forth on WhatsApp.",
+                            "Customers used to think I was a small dealer. Now my website looks bigger than dealerships with 5x my inventory."
                         ].map((quote, i) => (
                             <motion.div
                                 key={i}
@@ -392,24 +441,21 @@ export default function AutomotiveSolutionsPage() {
                 </div>
             </section>
 
-
-
             {/* CTA SECTION */}
             <section className="py-24 bg-primary text-primary-foreground">
                 <div className="container mx-auto px-4 text-center max-w-3xl">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 font-[family-name:var(--font-outfit)]">
-                        Ready to go digital?
+                        Ready to transform your dealership?
                     </h2>
                     <p className="text-xl opacity-90 mb-8">
-                        Your complete automotive website — ready to launch in days, not months.
+                        Your complete automotive platform — ready to launch in days, not months.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 mb-10">
                         {[
                             "Complete website setup",
                             "Your branding (logo, colors)",
                             "Inventory upload",
-                            "All features configured",
-                            "Training on how to use",
+                            "Training included",
                             "1 year hosting included"
                         ].map((item, i) => (
                             <span key={i} className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm">
